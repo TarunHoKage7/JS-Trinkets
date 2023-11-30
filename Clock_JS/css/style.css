@@ -1,0 +1,104 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+    box-sizing: border-box;
+  }
+  
+
+  :root{
+    --border-color: #00d5ff;
+    --shaded-background-color: #000000;
+    --footer-shade: #000000;
+    --light-background-color: #121e26;
+    --border: 3px solid var(--border-color);
+    --text-color: rgb(195, 252, 255);
+    --highlight-color: 'red';
+  }
+  /******************************************
+  /* LAYOUT
+  /*******************************************/
+  body,html{
+    /*background: url("/assets/Word-Art1.jpeg");*/
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0 0;
+    padding: 0 0;
+    scroll-behavior: smooth;
+    background-color: var(--light-background-color);
+    color: var(--text-color);
+  }
+
+  header{
+    border: var(--border)
+  }
+
+  main{
+    margin: 0 0;
+    padding: 0 0;
+    top: 10%;
+    left: 0;
+    position: fixed;
+    background-color: #00d5ff;
+  }
+
+  main{
+    display: flex;
+    background-color: var(--light-background-color);
+    position: fixed;
+    top: 40%;
+    left: 27%;
+    height: max(270px, 35%);
+    width: max(800px, 50%);
+    border: var(--border);
+    justify-content: space-around;
+  }
+  /******************************************
+  /* ADDITIONAL STYLES
+  /*******************************************/
+
+  #name{
+    text-align: center;
+    font-size:xx-large;
+  }
+
+  .clockBox{
+    display: block;
+  }
+  
+  .clockBox > p{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .clock{
+    border: var(--border);
+    padding: 90px;
+    border-radius: 50%;
+  }
+
+  .hrHand{
+    position: fixed;
+    border: var(--border);
+    height: 60px;
+    width: 3px;
+    border-radius: 5px;
+  }
+
+  .minHand{
+    position: fixed;
+    border: var(--border);
+    height: 75px;
+    width: 2px;
+    border-radius: 5px;
+  }
+
+  .secHand{
+    position: fixed;
+    border: var(--border);
+    height: 85px;
+    width: 1px;
+    border-radius: 5px;
+  }

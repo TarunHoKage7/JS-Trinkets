@@ -1,0 +1,85 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+    box-sizing: border-box;
+  }
+  
+
+  :root{
+    --border-color: #00d5ff;
+    --shaded-background-color: #000000;
+    --footer-shade: #000000;
+    --light-background-color: #121e26;
+    --border: 3px solid var(--border-color);
+    --text-color: rgb(195, 252, 255);
+    --highlight-color: 'red';
+  }
+  /******************************************
+  /* LAYOUT
+  /*******************************************/
+  body,html{
+    /*background: url("/assets/Word-Art1.jpeg");*/
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0 0;
+    padding: 0 0;
+    scroll-behavior: smooth;
+    background-color: var(--light-background-color);
+    color: var(--text-color);
+  }
+
+  header{
+    border: var(--border)
+  }
+
+  main{
+    margin: 0 0;
+    padding: 0 0;
+    top: 10%;
+    left: 0;
+    position: fixed;
+    background-color: #00d5ff;
+  }
+
+  main{
+    display: flex;
+    background-color: var(--light-background-color);
+    position: fixed;
+    top: 15%;
+    left: 2%;
+    width: 96%;
+    border: var(--border);
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  /******************************************
+  /* ADDITIONAL STYLES
+  /*******************************************/
+
+  #name{
+    text-align: center;
+    font-size:xx-large;
+  }
+
+  #listOfTrinkets{
+    list-style: None;
+  }
+
+  #listOfTrinkets > li {
+    margin: 20px;
+    border: var(--border);
+    border-radius: 20px;
+    background-color: var(--shaded-background-color);
+    padding: 10px;
+  }
+
+  #listOfTrinkets > li > a{
+    display: block;
+    text-align: center;
+    font-size: x-large;
+    color: var(--text-color);
+    text-decoration: None;
+  }
