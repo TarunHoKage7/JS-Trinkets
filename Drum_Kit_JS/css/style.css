@@ -48,6 +48,8 @@
   /*******************************************/
 
   #name{
+    -webkit-user-select: none;
+    user-select: none;
     text-align: center;
     font-size:xx-large;
   }
@@ -72,13 +74,21 @@
     flex-direction: column;
   }
 
+  #drum-keys > div:hover{
+    cursor: pointer;
+  }
+
   .stroke{
+    -webkit-user-select: none;
+    user-select: none;
     font-size: x-large;
     display: block;
     margin: auto;
   }
 
   .sound{
+    -webkit-user-select: none;
+    user-select: none;
     margin: 10% 0 -20% 0;
     font-size: small;
     display: block;

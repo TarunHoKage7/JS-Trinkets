@@ -1,4 +1,4 @@
-const keys = document.querySelectorAll('#drum-keys > div');
+const keys = Array(document.querySelectorAll('#drum-keys > div'));
 
 const soundDict = {
     'A': 'CLAP',
@@ -16,11 +16,30 @@ Object.keys(soundDict).forEach(keyStroke => {
     soundDict[keyStroke] = `/Drum_Kit_JS/assets/${soundDict[keyStroke]}.wav`;
 });
 
-addEventListener("keydown", drumPressed);
+addListeners();
+
+function addListeners() {
+    addEventListener("keydown", drumPressed);
+    document.querySelectorAll('#drum-keys > div').forEach(ele => {
+        ele.addEventListener("click", drumClicked, true)
+    })
+}
+
+function drumClicked(e){
+    
+    if(e.srcElement.id){
+        visualChange(e.srcElement);
+        playSound(e.srcElement.id);
+    }
+    else{
+        visualChange(e.srcElement.parentElement);
+        playSound(e.srcElement.parentElement.id);
+    }
+}
 
 function drumPressed(e){
-    let curSound = (e.key).toUpperCase();
-    let ele = document.getElementById(curSound);
+    const curSound = (e.key).toUpperCase();
+    const ele = document.getElementById(curSound);
     if(curSound in soundDict){
         visualChange(ele);
         playSound(curSound);
@@ -30,7 +49,6 @@ function drumPressed(e){
     }
 }
 
-
 function visualChange(ele){
     ele.classList.add("active");
     setTimeout(()=> {
@@ -39,9 +57,6 @@ function visualChange(ele){
 }
 
 function playSound(ele){
-    let audio = new Audio(soundDict[ele]);
+    const audio = new Audio(soundDict[ele]);
     audio.play()
 }
-
-
-
