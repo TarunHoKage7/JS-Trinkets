@@ -16,4 +16,4 @@ The theme will mostly be similar to my portfolio site (https://saikalyantarun.ne
 
 slide to change the root style vars
 * Status: Make the color Slider work onmousemove too.
-* Future Updates: Make it change all the colors on demand.
+* Future Updates: Make it change all the colors on demand.00.
