@@ -1,12 +1,8 @@
 const imgList = [...document.querySelectorAll('img')];
-const main = document.querySelector('main');
-main.addEventListener('mouseover', addClasses);
-main.addEventListener('mouseout', removeClasses);
 
 
 imgList.forEach(ele => {
-    ele.addEventListener('mouseover', imgExpand);
-    ele.addEventListener('mouseout', imgReduce);
+    ele.addEventListener('click', imgExpand);
 });
 
 
@@ -24,7 +20,10 @@ function removeClasses(e){
 }
 
 function imgExpand(e){
-    e.srcElement.classList.toggle('reduce');
+    imgList.forEach(ele => {
+        ele.srcElement.classList.add('reduce');
+    });
+    e.srcElement.classList.remove('reduce');
     e.srcElement.classList.add('expand');
     console.log(e.srcElement.classList)
     console.log(e.srcElement)
